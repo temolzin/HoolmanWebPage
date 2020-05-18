@@ -12,10 +12,7 @@
 
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <link rel="icon" href="img/favicon.png" type="image/png" />
-
-
 
   <!-- Custom Fonts -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -53,6 +50,9 @@
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="#contact">Contact</a>
       </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#location">Location</a>
+      </li>
     </ul>
   </nav>
 
@@ -62,22 +62,8 @@
       <!--<h1 class="mb-1">Stylish Portfolio</h1>-->
       <h3 class="mb-5">
         <!--<em>A Free Bootstrap Theme by Start Bootstrap</em>-->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
       </h3>
       <!--******************************Traductor**************************-->
       <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="French" /></a><a href="#" onclick="doGTranslate('en|de');return false;" title="German" class="gflag nturl" style="background-position:-300px -100px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="German" /></a><a href="#" onclick="doGTranslate('en|it');return false;" title="Italian" class="gflag nturl" style="background-position:-600px -100px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="Italian" /></a><a href="#" onclick="doGTranslate('en|pt');return false;" title="Portuguese" class="gflag nturl" style="background-position:-300px -200px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="Portuguese" /></a><a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl" style="background-position:-500px -200px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="Russian" /></a><a href="#" onclick="doGTranslate('en|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img src="https://gtranslate.net/flags/blank.png" height="16" width="16" alt="Spanish"/></a><br>
@@ -224,16 +210,49 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="content-section bg-dark text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-      <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+  <section id="contact" class="content-section bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+          <h2>Contact</h2>
+          <p class="text-center">(*) Required fields</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-xs-6"></div>
+        <div class="col-xs-offset-3 center-block col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <form id="contact-form" class="form" action="#" method="POST" role="form">
+            <div class="form-group">
+              <label class="form-label" for="name">* Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">* Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">* Phone Number</label>
+              <input type="number" class="form-control" id="phone" name="phone" placeholder="Phone number" tabindex="2" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">* Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">* Message</label>
+              <textarea rows="5" cols="50" name="message" class="form-control" id="message" placeholder="Message" tabindex="4" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-xl btn-light mr-4">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Map -->
-  <section id="contact" class="map">
+  <section id="location" class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.4721044864555!2d-99.00755818468154!3d19.649854038788447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ed8cd26eb601%3A0x7bd87e2fc955e526!2sRefividrio!5e0!3m2!1ses-419!2smx!4v1589302980030!5m2!1ses-419!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <br />
     <small>
