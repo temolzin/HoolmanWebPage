@@ -4,7 +4,7 @@ Hoolman web page is the init page of the hoolman mark.
 
 ## Preview
 
-[![Preview Hoolman Web Page](https://startbootstrap.com/assets/img/screenshots/themes/stylish-portfolio.png)](https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/)
+[![Preview Hoolman Web Page](https://github.com/temolzin/hoolmanwebpage/blob/master/img/initpage.png)](https://github.com/temolzin/hoolmanwebpage/blob/master/img/initpage.png)
 
 ## Comenzando 🚀
 
