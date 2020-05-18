@@ -27,6 +27,6 @@ git clone https://github.com/temolzin/hoolmanpage.git
 
 ## License 📄
 
-This project contain a MIT License, can you see the file in [LICENSE.md](LICENSE.md)
+This project contain a MIT License, can you see the file in [LICENSE.md](https://github.com/temolzin/hoolmanwebpage/blob/master/LICENSE)
 
 
