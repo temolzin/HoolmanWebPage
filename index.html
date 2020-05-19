@@ -215,13 +215,13 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
           <h2>Contact</h2>
-          <p class="text-center">(*) Required fields</p>
+          <p class="text-center"> Send us a message <br> (*) Required fields</p>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3 col-xs-6"></div>
-        <div class="col-xs-offset-3 center-block col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <form id="contact-form" class="form" action="#" method="POST" role="form">
+        <div class="col-xs-offset-3 center-block col-xs-6 col-sm-12 col-md-6 col-lg-6">
+          <form id="contact-form" name="contact-form" class="form" action="#" method="POST" role="form">
             <div class="form-group">
               <label class="form-label" for="name">* Name</label>
               <input type="text" class="form-control" id="name" name="name" placeholder="Name" tabindex="1" required>
@@ -296,7 +296,75 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      enviarFormulario();
+    });
+    var enviarFormulario = function () {
+      $.validator.setDefaults({
+        submitHandler: function () {
+          var datos = $('#contact-form').serialize() + "&action=sendemail";
+          $.ajax({
+            type: "POST",
+            url: "functions/process/sendemailajax.php",
+            data: datos,
+            success: function(data){
+              console.log(data);
+              if(data == 'okok') {
+                Swal.fire(
+                        "¡Success!",
+                        "The message was sent correctly",
+                        "success"
+                ).then(function() {
+                  window.location = "index.html";
+                })
+              } else {
+                Swal.fire(
+                        "¡Error!",
+                        "An error occurred while sending the message. " + data,
+                        "error"
+                );
+              }
+            },
+          });
+        }
+      });
+      $('#contact-form').validate({
+        rules: {
+          name: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          phonenumber: {
+            required: true,
+            minLength: 10,
+          },
+          subject: {
+            required: true
+          },
+          message : {
+            required: true
+          }
+        },
+        errorElement: 'span',
+        errorPlacement: function (error, element) {
+          error.addClass('invalid-feedback');
+          element.closest('.form-group').append(error);
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass('is-invalid');
+        }
+      });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
   
