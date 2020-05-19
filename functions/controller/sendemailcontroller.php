@@ -31,12 +31,15 @@ class SendEmailController
             $mail->Port = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
             $mail->CharSet = 'UTF-8';
 
+            //Código para agregar una imagen y después se manda a llamar con <img src=""/>
+            $mail->AddEmbeddedImage('../../img/logohoolman.png', 'emailimg', 'attachment', 'base64', 'image/png');
+            $mail->AddEmbeddedImage('../../img/favicon.png', 'favicon', 'attachment', 'base64', 'image/png');
+
             //Recipients
             $mail->setFrom('programadorzn@refividrio.com.mx');
             $mail->addAddress($email);
 
             $html = '';
-
             $html .= '<!DOCTYPE html>
                 <html lang="es">
                 <head>
@@ -48,10 +51,11 @@ class SendEmailController
                 
                 <!--Copia desde aquí-->
                 <table style="max-width: 600px; padding: 10px; margin:0 auto; border-collapse: collapse;">
-                
                     <tr>
                         <td style="padding: 0">
-                            <img style="padding: 0; display: block" src="../../img/logohoolman.png" width="50%">
+                            <a href="https://www.hoolman.com">
+                                <img src="cid:emailimg" class="img-logo" />
+                            </a>
                         </td>
                     </tr>
                 
@@ -82,7 +86,7 @@ class SendEmailController
                                 <div style="width: 100%; text-align: center">
                                     <a style="text-decoration: none; border-radius: 5px; padding: 11px 23px; color: white; background-color: #3498db" href="https://www.hoolman.com">Visit Us</a>
                                 </div>
-                                <p style="color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0"> Copyright &copy; <img src="img/favicon.png" width="16px" height="16px" class="img-fluid img-responsive"> Hoolman 2020</p>
+                                <p style="color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0"> Copyright &copy; <img width="16px" height="16px" src="cid:favicon"> Hoolman 2020</p>
                             </div>
                         </td>
                     </tr>
@@ -127,6 +131,11 @@ class SendEmailController
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
             $mail->Port = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
             $mail->CharSet = 'UTF-8';
+
+            //Código para agregar una imagen y después se manda a llamar con <img src=""/>
+            $mail->AddEmbeddedImage('../../img/logohoolman.png', 'emailimg', 'attachment', 'base64', 'image/png');
+            $mail->AddEmbeddedImage('../../img/favicon.png', 'favicon', 'attachment', 'base64', 'image/png');
+
             //Recipients
             $mail->setFrom($email);
             $mail->addAddress('programadorzn@refividrio.com.mx');
@@ -146,7 +155,9 @@ class SendEmailController
                 
                     <tr>
                         <td style="padding: 0">
-                            <img style="padding: 0; display: block" src="../img/logohoolman.png" width="50%">
+                            <a href="https://www.hoolman.com">
+                                <img style="padding: 0; display: block; alignment: center;" src="cid:emailimg" width="50%">
+                            </a>
                         </td>
                     </tr>
                 
@@ -169,13 +180,7 @@ class SendEmailController
                                     <li>Message: '. $mesagge .'</li>
                                 </ul>
                                 <br>
-                                <p style="margin: 2px; font-size: 15px; text-align: center">
-                                    Thanks for your preference
-                                </p><br>
-                                <div style="width: 100%; text-align: center">
-                                    <a style="text-decoration: none; border-radius: 5px; padding: 11px 23px; color: white; background-color: #3498db" href="https://www.hoolman.com">Visit Us</a>
-                                </div>
-                                <p style="color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0"> Copyright &copy; <img src="../img/favicon.png" width="16px" height="16px" class="img-fluid img-responsive"> Hoolman 2020</p>
+                                <p style="color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0"> Copyright &copy; <img src="cid:favicon" width="4%"> Hoolman 2020</p>
                             </div>
                         </td>
                     </tr>
