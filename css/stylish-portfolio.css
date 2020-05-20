@@ -99,18 +99,19 @@ h6 {
   background-size: cover;
 }
 
-
 .masthead h1 {
   font-size: 4rem;
   margin: 0;
   padding: 0;
 }
 
+/*Para que el logo de inicio se oculte cuando la pantalla este completa y en pc*/
 #imgStart {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
+  /*Para que el logo de hoolman se muestre en modo portrait en celular*/
   #imgStart {
     display: block;
   }
@@ -126,7 +127,7 @@ h6 {
     background-position: left;
     background-repeat: initial;
     background-origin: content-box;
-    background-blend-mode: color;
+    background-blend-mode: darken;
     background-size: inherit;
   }
   .masthead h1 {
