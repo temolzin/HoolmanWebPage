@@ -97,13 +97,89 @@ h6 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 
 .masthead h1 {
   font-size: 4rem;
   margin: 0;
   padding: 0;
+}
+
+#imgStart {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #imgStart {
+    display: block;
+  }
+  .masthead {
+    min-height: 30rem;
+    position: relative;
+    display: compact;
+    width: 100%;
+    height: inherit;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 10%), url("../img/bg-masthead.jpg");
+    background-position: left;
+    background-repeat: initial;
+    background-origin: content-box;
+    background-blend-mode: color;
+    background-size: inherit;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 370px)
+and (max-device-width: 820px)
+and (orientation: landscape) {
+  h3 {
+    font-size: .9rem;
+  }
+  .masthead {
+    min-height: inherit;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 10%), url("../img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 480px)
+and (max-device-width: 640px)
+and (orientation: landscape) {
+  h3 {
+    font-size: .5rem;
+  }
+  .masthead {
+    min-height: inherit;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(10deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 10%), url("../img/bg-masthead.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .masthead h1 {
+    font-size: 5.5rem;
+  }
 }
 
 @media (min-width: 992px) {
